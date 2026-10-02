@@ -1,0 +1,24 @@
+DIGIDORM - DEPLOYMENT READY
+
+Files added/updated:
+- Procfile
+- railway.json
+- requirements.txt (Gunicorn added)
+- config.py (database settings can now come from environment variables)
+
+LOCAL RUN:
+    python app.py
+
+ONLINE DEPLOYMENT:
+1. Upload this project to a GitHub repository.
+2. Create a Railway project and deploy the GitHub repository.
+3. Add a MySQL service in the same Railway project.
+4. Set/import the database schema from database/hostel.sql into the Railway MySQL database.
+5. The Flask app will use:
+   MYSQLHOST, MYSQLPORT, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE
+   from Railway's environment variables.
+6. Generate a public domain in Railway.
+7. Share that HTTPS URL with your madam.
+
+IMPORTANT:
+Do not commit real production passwords or API keys to GitHub.
